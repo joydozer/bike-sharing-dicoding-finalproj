@@ -1,5 +1,5 @@
 # Bike Sharing Dataset
-# Jonathan W. ID Dicoding weiss001
+### ID Dicoding weiss001
 
 ## Setup environment
 ```
