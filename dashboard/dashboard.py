@@ -5,7 +5,7 @@ import seaborn as sns
 import streamlit as st
 sns.set_theme(style='dark')
 
-all_df = pd.read_csv('dashboard/all_data.csv')
+all_df = pd.read_csv('main_data.csv')
 
 min_date = datetime.datetime.strptime(all_df['dteday'].min(), '%Y-%m-%d').date()
 max_date = datetime.datetime.strptime(all_df['dteday'].max(), '%Y-%m-%d').date()
