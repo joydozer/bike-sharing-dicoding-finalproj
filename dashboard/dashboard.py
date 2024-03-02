@@ -46,7 +46,7 @@ with col3:
 
 sns.set_style('whitegrid')
 fig, ax = plt.subplots(figsize=(16,8))
-ax = sns.lineplot(data=all_df, x='dteday', y='cnt_day')
+ax = sns.lineplot(data=all_df, x='dteday', y='cnt_day', marker="o")
 ax.set_xlim(start_date, end_date)
 plt.xlabel('Date')
 plt.ylabel('Total order per day')
