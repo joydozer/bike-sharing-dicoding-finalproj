@@ -62,7 +62,7 @@ for x in filtered_df['temp_hour']:
 fig, axs = plt.subplots(ncols=2)
 fig.set_figwidth(14)
 fig.set_figheight(6)
-sns.lineplot(data=filtered_df, x=real_temp, y='cnt_hour', ax=axs[0])
+sns.lineplot(data=filtered_df, x=real_temp, y='cnt_hour', marker="o", ax=axs[0])
 sns.scatterplot(data=filtered_df, x='dteday', y='cnt_day', hue=real_temp, ax=axs[1])
 axs[0].set_xlabel('Temperature (°C)')
 axs[1].set_xlabel('Date')
@@ -83,6 +83,8 @@ for x in filtered_df['season_desc_hour']:
         nama_musim.append(x)
 fig = plt.figure(figsize=(16,8))
 sns.barplot(x=nama_musim, y=data_season)
+for i in range(len(nama_musim)):
+    plt.text(i, data_season.iloc[i]//2, round(data_season.iloc[i]), ha = 'center')
 plt.xlabel('Season')
 plt.ylabel('Total Mean Bike Sharing per Hour')
 st.pyplot(fig)
